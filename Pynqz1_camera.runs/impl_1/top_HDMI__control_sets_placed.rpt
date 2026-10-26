@@ -1,0 +1,97 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Mar  2 18:05:05 2026
+| Host         : DT-LAP-2024-026 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_HDMI__control_sets_placed.rpt
+| Design       : top_HDMI_
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    19 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              85 |           33 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              77 |           24 |
+| Yes          | No                    | No                     |              95 |           31 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              72 |           19 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal         |                      Enable Signal                      |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|  clocking/inst/clk_out1      | my_debounce/r_sample1_out                               |                                                          |                1 |              1 |         1.00 |
+|  clocking/inst/clk_out2      |                                                         | my_ov7670_controller/Inst_i2c_sender/sioc_i_1_n_0        |                1 |              1 |         1.00 |
+|  hdmi/sig_gen/CLK            |                                                         | hdmi/encoder/_n_0                                        |                1 |              4 |         4.00 |
+|  clocking/inst/clk_out2      |                                                         |                                                          |                3 |              5 |         1.67 |
+|  clocking/inst/clk_out2      | my_ov7670_controller/Inst_i2c_sender/divider[7]_i_1_n_0 |                                                          |                2 |              8 |         4.00 |
+|  clocking/inst/clk_out2      | my_ov7670_controller/Inst_i2c_sender/taken              | my_debounce/r_sample                                     |                2 |              8 |         4.00 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 |                                                         | hdmi/sig_gen/testing/h_count[0]_i_1_n_0                  |                3 |             10 |         3.33 |
+|  clocking/inst/clk_out2      | my_ov7670_controller/Inst_i2c_sender/busy_sr0           | my_ov7670_controller/Inst_i2c_sender/data_sr[30]_i_1_n_0 |                3 |             11 |         3.67 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 | hdmi/sig_gen/testing/h_count_reg[9]_0                   |                                                          |                6 |             12 |         2.00 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 | hdmi/sig_gen/testing/v_count[15]_i_2_n_0                | hdmi/sig_gen/testing/v_count[15]_i_1_n_0                 |                4 |             15 |         3.75 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 | hdmi/sig_gen/testing/address0                           | hdmi/sig_gen/testing/clear                               |                5 |             19 |         3.80 |
+|  ov7670_pclk_IBUF_BUFG       | my_ov7670_capture/p_1_in                                | ov7670_vsync_IBUF                                        |                5 |             19 |         3.80 |
+|  clocking/inst/clk_out1      |                                                         | my_debounce/p_0_in                                       |                5 |             20 |         4.00 |
+|  ov7670_pclk_IBUF_BUFG       |                                                         | ov7670_vsync_IBUF                                        |                6 |             20 |         3.33 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 |                                                         | hdmi/sig_gen/testing/h_count_reg[9]_2                    |                8 |             22 |         2.75 |
+|  ov7670_pclk_IBUF_BUFG       | my_ov7670_capture/d_latch[11]_i_1_n_0                   |                                                          |               11 |             25 |         2.27 |
+|  hdmi/sig_gen/CLK            |                                                         |                                                          |                6 |             31 |         5.17 |
+|  clocking/inst/clk_out2      | my_ov7670_controller/Inst_i2c_sender/busy_sr0           |                                                          |               11 |             49 |         4.45 |
+|  hdmi/sig_gen/BUFG_clk_pix_0 |                                                         |                                                          |               24 |             49 |         2.04 |
++------------------------------+---------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+
+
