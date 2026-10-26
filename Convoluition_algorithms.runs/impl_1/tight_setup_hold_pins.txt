@@ -1,0 +1,13 @@
++====================+====================+=====================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                                                                                                                                 |
++====================+====================+=====================================================================================================================================+
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[0]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[4]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[5]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[3]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[1]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[6]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[2]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/address_reg_rep[7]/R                                                                     |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | my_ov7670_controller/Inst_ov7670_registers/my_ov7670_controller/Inst_ov7670_registers/sreg_reg_cooolgate_en_gate_183_cooolDelFlop/D |
++--------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------+
